@@ -2,6 +2,7 @@
 	"Artists" : [
 		"Billie" : {
 			"Born": "xyz",
+			"Image": "./images/artists/billie.jpeg",
 			"Hometown": "xyz",
 			"Fun-Fact": "xyz",
 			"Album": "name",
@@ -11,6 +12,7 @@
 		},
 		"Drake" : {
 				"Born": "xyz",
+				"Image": "",
 				"Hometown": "xyz",
 				"Fun-Fact": "xyz",
 				"Album": "name",
