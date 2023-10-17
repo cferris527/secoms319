@@ -3,6 +3,7 @@ header {
     background-color: brown;
     color: #fff;
     padding: 2px 0;
+    font-size: 35px;
 }
 
 nav ul {
@@ -44,4 +45,26 @@ p {
     color: burlywood;
     padding-left: 30px;
     font-size: 25px;
+}
+
+.artistInfo {
+    padding: 5px;
+    width: 350px;
+    border-style:solid;
+    border-radius: 5px;
+    margin: 15px;
+}
+.artistInfo h1{
+    text-align: center;
+    font-size: 35px;
+}
+.artistInfo p{
+    font-size: 20px;
+}
+
+.artistList{
+    width: 75%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
 }
