@@ -52,6 +52,7 @@ p {
     width: 350px;
     border-style:solid;
     border-radius: 5px;
+    border-width: 4px;
     margin: 15px;
 }
 .artistInfo h1{
@@ -65,6 +66,7 @@ p {
     margin: auto;
     display: block;
     border-style: dashed;
+    border-width: 3px;
     justify-content: center;
     border-color: navy;
     padding: 3px;
