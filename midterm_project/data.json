@@ -1,6 +1,6 @@
 {
 	"Artists" : [
-		"Billie" : {
+		{"Billie" : {
 			"Born": "xyz",
 			"Image": "./images/artists/billie.jpeg",
 			"Hometown": "xyz",
@@ -9,20 +9,18 @@
 			"Songs": [
 				"song1", "song2"
 			]
+			}
 		},
-		"Drake" : {
-				"Born": "xyz",
-				"Image": "",
-				"Hometown": "xyz",
-				"Fun-Fact": "xyz",
-				"Album": "name",
-				"Songs": [
-					"song1", "song2"
-				]
-			},
-
-
-
-
-	], 
+		{"Drake" : {
+			"Born": "xyz",
+			"Image": "",
+			"Hometown": "xyz",
+			"Fun-Fact": "xyz",
+			"Album": "name",
+			"Songs": [
+				"song1", "song2"
+			]
+			}
+		}
+	]
 }
