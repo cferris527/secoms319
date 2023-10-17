@@ -1,0 +1,26 @@
+{
+	"Artists" : [
+		"Billie" : {
+			"Born": "xyz",
+			"Hometown": "xyz",
+			"Fun-Fact": "xyz",
+			"Album": "name",
+			"Songs": [
+				"song1", "song2"
+			]
+		},
+		"Drake" : {
+				"Born": "xyz",
+				"Hometown": "xyz",
+				"Fun-Fact": "xyz",
+				"Album": "name",
+				"Songs": [
+					"song1", "song2"
+				]
+			},
+
+
+
+
+	], 
+}

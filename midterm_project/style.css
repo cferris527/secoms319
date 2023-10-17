@@ -62,7 +62,14 @@ p {
     font-size: 20px;
 }
 .artistInfo img{
-    
+    margin: auto;
+    display: block;
+    border-style: dashed;
+    justify-content: center;
+    border-color: navy;
+    padding: 3px;
+    height : 270px;
+    width: 180px;
 }
 
 .artistList{
