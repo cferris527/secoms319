@@ -115,3 +115,7 @@ p {
     display: block;
     margin: auto;
 }
+
+.album li {
+    margin-left: 35px;
+}
