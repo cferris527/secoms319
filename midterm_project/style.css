@@ -71,7 +71,7 @@ p {
     border-color: navy;
     padding: 3px;
     height : 270px;
-    width: 180px;
+    width: 195px;
 }
 
 .artistList{
@@ -81,4 +81,8 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
+}
+
+.artistAlbum {
+    margin-left: 25px;
 }

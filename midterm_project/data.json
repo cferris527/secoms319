@@ -1,21 +1,21 @@
 {
 	"Artists" : [
 		{"Billie" : {
-			"Born": "xyz",
+			"Born": "December 18, 2001",
 			"Image": "./images/artists/billie.jpeg",
-			"Hometown": "xyz",
-			"Fun-Fact": "xyz",
-			"Album": "name",
+			"Hometown": "Los Angeles, CA",
+			"FunFact": "Recorded music in their familys home studio with her brother",
+			"Album": "When We Fall Asleep, Where Do We Go?",
 			"Songs": [
-				"song1", "song2"
+				"Bad Guy", "Bury a Friend"
 			]
 			}
 		},
 		{"Drake" : {
 			"Born": "xyz",
-			"Image": "",
+			"Image": "./images/artists/drake.jpeg",
 			"Hometown": "xyz",
-			"Fun-Fact": "xyz",
+			"FunFact": "xyz",
 			"Album": "name",
 			"Songs": [
 				"song1", "song2"
