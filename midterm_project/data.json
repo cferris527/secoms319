@@ -68,110 +68,77 @@
 		}
 	],
 	"Albums": [
-		{
-			"Name" : "When We Fall Asleep, Where Do We Go?",
+		  {
+			"Name": "When We Fall Asleep, Where Do We Go?",
 			"Singer": "Billie Eilish",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-		},
-		{
-			"Name" : "Happier Than Ever",
+			"Date": "March 29, 2019",
+			"Songs": ["Bad Guy", "Ocean Eyes", "Bury a Friend"]
+		  },
+		  {
+			"Name": "Happier Than Ever",
 			"Singer": "Billie Eilish",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-		},
-		{
-			"Name" : "Take Care",
+			"Date": "July 30, 2021",
+			"Songs": ["NDA", "Happier Than Ever", "Lost Cause"]
+		  },
+		  {
+			"Name": "Take Care",
 			"Singer": "Drake",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-		},
-		{
-			"Name" :  "Views",
+			"Date": "November 15, 2011",
+			"Songs": ["Take Care", "Headlines", "Marvin's Room"]
+		  },
+		  {
+			"Name": "Views",
 			"Singer": "Drake",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "The Pink Print",
-			"Singer": "Nicki Manaj",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "Pink Friday",
-			"Singer": "Nicki Manaj",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "Thank U, Next",
+			"Date": "April 29, 2016",
+			"Songs": ["One Dance", "Hotline Bling", "Controlla"]
+		  },
+		  {
+			"Name": "The Pink Print",
+			"Singer": "Nicki Minaj",
+			"Date": "December 12, 2014",
+			"Songs": ["Anaconda", "Truffle Butter", "Feeling Myself"]
+		  },
+		  {
+			"Name": "Pink Friday",
+			"Singer": "Nicki Minaj",
+			"Date": "November 22, 2010",
+			"Songs": ["Super Bass", "Moment 4 Life", "Did It On'em"]
+		  },
+		  {
+			"Name": "Thank U, Next",
 			"Singer": "Ariana Grande",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "My Everything",
+			"Date": "February 8, 2019",
+			"Songs": ["Thank U, Next", "7 Rings", "Break Up with Your Girlfriend, I'm Bored"]
+		  },
+		  {
+			"Name": "My Everything",
 			"Singer": "Ariana Grande",
-			"Date": "date",
-			"Songs": [
-				"Problem", "Bang Bang", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "The Eminem Show",
+			"Date": "August 25, 2014",
+			"Songs": ["Problem", "Bang Bang", "Love Me Harder"]
+		  },
+		  {
+			"Name": "The Eminem Show",
 			"Singer": "Eminem",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "The Marhsall Matters LP",
+			"Date": "May 28, 2002",
+			"Songs": ["Without Me", "Cleanin' Out My Closet", "Sing for the Moment"]
+		  },
+		  {
+			"Name": "The Marshall Mathers LP",
 			"Singer": "Eminem",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "Starboy",
-			"Singer": "The Weekend",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		},
-		{
-			"Name" : "Beauty Behind the Madness",
-			"Singer": "The Weekend",
-			"Date": "date",
-			"Songs": [
-				"song1", "song2", "song3", "song4"
-			]
-
-		}
+			"Date": "May 23, 2000",
+			"Songs": ["Stan", "The Real Slim Shady", "The Way I Am"]
+		  },
+		  {
+			"Name": "Starboy",
+			"Singer": "The Weeknd",
+			"Date": "November 25, 2016",
+			"Songs": ["Starboy", "I Feel It Coming", "Party Monster"]
+		  },
+		  {
+			"Name": "Beauty Behind the Madness",
+			"Singer": "The Weeknd",
+			"Date": "August 28, 2015",
+			"Songs": ["Can't Feel My Face", "The Hills", "In the Night"]
+		  }  
 	]
 }
