@@ -41,7 +41,7 @@ footer {
 
 /* This font is really ugly but just setting p to something*/
 p {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ab9649;
     padding-left: 30px;
     font-size: 25px;
