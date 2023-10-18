@@ -13,7 +13,7 @@ function createAlbumDivs(data) {
         <img src = "${album.Image}">
         <p>Singer: ${album.Singer}</p>
         <p>Date: ${album.Date}</p>
-        <p>Songs:</p>
+        <p>Top Songs:</p>
         `;
     
         // Create an unordered list for songs
