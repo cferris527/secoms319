@@ -108,3 +108,10 @@ p {
 .album h2{
     text-align: center;
 }
+
+.album img{
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: auto;
+}

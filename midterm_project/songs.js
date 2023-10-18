@@ -7,8 +7,10 @@ function createAlbumDivs(data) {
       albumDiv.className = "album";
   
       // Create HTML structure for the album
+      console.log(album.Image)
       albumDiv.innerHTML = `
         <h2>${album.Name}</h2>
+        <img src = "${album.Image}">
         <p>Singer: ${album.Singer}</p>
         <p>Date: ${album.Date}</p>
         <p>Songs:</p>

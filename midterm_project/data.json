@@ -71,71 +71,83 @@
 		  {
 			"Name": "When We Fall Asleep, Where Do We Go?",
 			"Singer": "Billie Eilish",
+			"Image" : "./images/album/sleep.png",
 			"Date": "March 29, 2019",
 			"Songs": ["Bad Guy", "Ocean Eyes", "Bury a Friend"]
 		  },
 		  {
 			"Name": "Happier Than Ever",
+			"Image" : "./images/album/hapier.png",
 			"Singer": "Billie Eilish",
 			"Date": "July 30, 2021",
 			"Songs": ["NDA", "Happier Than Ever", "Lost Cause"]
 		  },
 		  {
 			"Name": "Take Care",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Drake",
 			"Date": "November 15, 2011",
 			"Songs": ["Take Care", "Headlines", "Marvin's Room"]
 		  },
 		  {
 			"Name": "Views",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Drake",
 			"Date": "April 29, 2016",
 			"Songs": ["One Dance", "Hotline Bling", "Controlla"]
 		  },
 		  {
 			"Name": "The Pink Print",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Nicki Minaj",
 			"Date": "December 12, 2014",
 			"Songs": ["Anaconda", "Truffle Butter", "Feeling Myself"]
 		  },
 		  {
 			"Name": "Pink Friday",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Nicki Minaj",
 			"Date": "November 22, 2010",
 			"Songs": ["Super Bass", "Moment 4 Life", "Did It On'em"]
 		  },
 		  {
 			"Name": "Thank U, Next",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Ariana Grande",
 			"Date": "February 8, 2019",
 			"Songs": ["Thank U, Next", "7 Rings", "Break Up with Your Girlfriend, I'm Bored"]
 		  },
 		  {
 			"Name": "My Everything",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Ariana Grande",
 			"Date": "August 25, 2014",
 			"Songs": ["Problem", "Bang Bang", "Love Me Harder"]
 		  },
 		  {
 			"Name": "The Eminem Show",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Eminem",
 			"Date": "May 28, 2002",
 			"Songs": ["Without Me", "Cleanin' Out My Closet", "Sing for the Moment"]
 		  },
 		  {
 			"Name": "The Marshall Mathers LP",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "Eminem",
 			"Date": "May 23, 2000",
 			"Songs": ["Stan", "The Real Slim Shady", "The Way I Am"]
 		  },
 		  {
 			"Name": "Starboy",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "The Weeknd",
 			"Date": "November 25, 2016",
 			"Songs": ["Starboy", "I Feel It Coming", "Party Monster"]
 		  },
 		  {
 			"Name": "Beauty Behind the Madness",
+			"Image" : "./images/album/tmp.txt",
 			"Singer": "The Weeknd",
 			"Date": "August 28, 2015",
 			"Songs": ["Can't Feel My Face", "The Hills", "In the Night"]
