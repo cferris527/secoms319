@@ -3,6 +3,7 @@ console.log("TEST")
 function setArtistImage(artistName) {
   // Replace with the actual path to your JSON file
   const jsonFilePath = 'data.json';
+  const imageFolderPath = '/images/artists/'; 
 
   // Fetch the JSON file
   fetch(jsonFilePath)
@@ -13,7 +14,7 @@ function setArtistImage(artistName) {
       const artistInfo = artistData[artistName];
       const imgElement = document.getElementById("artistImage"); // Replace "artistImage" with your actual img tag's id
       if (imgElement) {
-        imgElement.src = artistInfo.Image;
+        imgElement.src = `${imageFolderPath}${artistName.toLowerCase()}.jpeg`;
       } else {
         console.error("Image element not found in the HTML.");
       }
@@ -26,6 +27,11 @@ function setArtistImage(artistName) {
   });
 }
 
-// Usage example
-const artistName = "Drake"; // Replace with the desired artist's name
-setArtistImage(artistName);
+function setAllArtists(){
+  const artists = ["Drake", "Billie"]
+  for(let i = 0; i < artists.length; i++) {
+    setArtistImage(artists[i])
+  }
+}
+
+setAllArtists()
