@@ -100,6 +100,10 @@ p {
 .album {
     width: 350px;
     padding: 5px;
+    border-style: inset;
+    border-radius: 10px;
+    border-width: 5px;
+    margin: 15px;
 }
 .album h2{
     text-align: center;
