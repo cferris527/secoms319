@@ -1,5 +1,3 @@
-console.log("TEST")
-
 function setArtist(artistName, position) {
   // Replace with the actual path to your JSON file
   const jsonFilePath = 'data.json';
