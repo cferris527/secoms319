@@ -18,7 +18,7 @@
 			"FunFact": "He was in the childhood show Degrassi.",
 			"Album": "Take Care",
 			"Songs": [
-				"Take Care", "Hotline Bling"
+				"Take Care", "Hate Sleeping Alone"
 			]
 			}
 		},
@@ -65,6 +65,113 @@
 				"Can't Feel My Face", "The Hills"
 			]
 			}
+		}
+	],
+	"Albums": [
+		{
+			"Name" : "When We Fall Asleep, Where Do We Go?",
+			"Singer": "Billie Eilish",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+		},
+		{
+			"Name" : "Happier Than Ever",
+			"Singer": "Billie Eilish",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+		},
+		{
+			"Name" : "Take Care",
+			"Singer": "Drake",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+		},
+		{
+			"Name" :  "Views",
+			"Singer": "Drake",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "The Pink Print",
+			"Singer": "Nicki Manaj",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "Pink Friday",
+			"Singer": "Nicki Manaj",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "Thank U, Next",
+			"Singer": "Ariana Grande",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "My Everything",
+			"Singer": "Ariana Grande",
+			"Date": "date",
+			"Songs": [
+				"Problem", "Bang Bang", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "The Eminem Show",
+			"Singer": "Eminem",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "The Marhsall Matters LP",
+			"Singer": "Eminem",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "Starboy",
+			"Singer": "The Weekend",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
+		},
+		{
+			"Name" : "Beauty Behind the Madness",
+			"Singer": "The Weekend",
+			"Date": "date",
+			"Songs": [
+				"song1", "song2", "song3", "song4"
+			]
+
 		}
 	]
 }

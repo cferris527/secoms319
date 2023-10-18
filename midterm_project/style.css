@@ -42,7 +42,7 @@ footer {
 /* This font is really ugly but just setting p to something*/
 p {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: burlywood;
+    color: #ab9649;
     padding-left: 30px;
     font-size: 25px;
 }
@@ -86,4 +86,21 @@ p {
 .artistAlbum {
     margin-left: 25px;
     font-size: 19px;
+}
+
+.AlbumContainer {
+    width: 85%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.album {
+    width: 350px;
+    padding: 5px;
+}
+.album h2{
+    text-align: center;
 }
