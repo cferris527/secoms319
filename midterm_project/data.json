@@ -12,13 +12,57 @@
 			}
 		},
 		{"Drake" : {
-			"Born": "xyz",
+			"Born": "October 24, 1986",
 			"Image": "./images/artists/drake.jpeg",
-			"Hometown": "xyz",
-			"FunFact": "xyz",
-			"Album": "name",
+			"Hometown": "Toronto, Canada",
+			"FunFact": "He was in the childhood show Degrassi.",
+			"Album": "Take Care",
 			"Songs": [
-				"song1", "song2"
+				"Take Care", "Hotline Bling"
+			]
+			}
+		},
+		{"Nicki Manaj" : {
+			"Born": "December 8, 1982",
+			"Image": "./images/artists/nicki-manaj.jpeg",
+			"Hometown": "Queens, NY",
+			"FunFact": "Initally pursued acting before sining.",
+			"Album": "Pink Friday",
+			"Songs": [
+				"Super Bass", "Moment 4 Life"
+			]
+			}
+		},
+		{"Ariana Grande" : {
+			"Born": "June 26, 1993",
+			"Image": "./images/artists/ari.jpeg",
+			"Hometown": "Boca Raton, FL",
+			"FunFact": "Began her career as an actress on Victorous and Sam & Cat",
+			"Album": "Thank U, Next",
+			"Songs": [
+				"Thank U, Next", "7 Rings"
+			]
+			}
+		},
+		{"Eminem" : {
+			"Born": "October 17, 1972",
+			"Image": "./images/artists/em.jpeg",
+			"Hometown": "St. Joseph, MO",
+			"FunFact": "He is left handed.",
+			"Album": "The Marshall Mathers LP",
+			"Songs": [
+				"Stan", "The Real Slim Shady"
+			]
+			}
+		},
+		{"The weekend" : {
+			"Born": "February 16, 1990",
+			"Image": "./images/artists/the-weekend.jpeg",
+			"Hometown": "Toronto, Canada",
+			"FunFact": "He would upload his music anonymously to the internet in his early career.",
+			"Album": "Beauty Behind the Madness",
+			"Songs": [
+				"Can't Feel My Face", "The Hills"
 			]
 			}
 		}

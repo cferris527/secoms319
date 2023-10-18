@@ -38,7 +38,7 @@ function setArtist(artistName, position) {
 }
 
 function setAllArtists(){
-  const artists = ["Billie", "Drake"]
+  const artists = ["Billie", "Drake", "Nicki Manaj", "Ariana Grande", "Eminem", "The weekend"]
   for(let i = 0; i < artists.length; i++) {
     setArtist(artists[i], i)
   }
