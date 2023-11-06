@@ -51,33 +51,36 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>Online Shopping</h1>
+      <h1 className='display-1 mt-4 mb-3'>Cooler Walmart</h1>
       {view === 'browse' && (
         <div>
-          <h2>Browse View</h2>
-          <input
-            type="text"
-            placeholder="Search products"
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <div className="row">
+          <div className = "d-flex justify-content-between mt-4 border border-dark rounded p-2 bg-secondary bg-gradient">
+            <input className=''
+              type="text"
+              placeholder="Search products"
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <button className = "btn btn-primary" onClick={handleCheckout}>Go to Cart</button>
+          </div>
+          <div className="row row-cols-lg-3 mt-4 m-2 p-1 g-5">
             {products
               .filter((product) =>
                 product.name.toLowerCase().includes(search.toLowerCase())
               )
               .map((product) => (
-                <div className="col" key={product.id}>
-                  <img src={require(`./images/${product.image}`)} alt={product.name} height = "100px" width = "120px;"/>
-                  <h3>{product.name}</h3>
-                  <p>{product.description}</p>
-                  <p>${product.price}</p>
-                  <button onClick={() => handleAddToCart(product.id)}>
-                    Add to Cart
-                  </button>
+                <div className="col mt-5 " key={product.id}>
+                  <div className=''>
+                    <img src={require(`./images/${product.image}`)} alt={product.name} height = "140px" width = "190px;"/>
+                    <h3>{product.name}</h3>
+                    <p>{product.description}</p>
+                    <p className='text-secondary'>${product.price}</p>
+                    <button className = "btn btn-secondary" onClick={() => handleAddToCart(product.id)}>
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
               ))}
           </div>
-          <button onClick={handleCheckout}>Go to Cart</button>
         </div>
       )}
 
