@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Apple",
+      "description": "Fresh and delicious apple",
+      "price": 1.01,
+      "image" : "apple.png"
+    },
+    {
+      "name": "Banana",
+      "description": "Ripe and sweet banana",
+      "price": 0.59,
+      "image" : "banana.jpg"
+    },
+    {
+      "name": "Juice",
+      "description": "Apple juice with various flavors",
+      "price": 2.49,
+      "image" : "juice.png"
+    },
+    {
+      "name": "Burrito",
+      "description": "A tasty and filling burrito",
+      "price": 6.99,
+      "image" : "burrito.jpeg"
+    },
+    {
+      "name": "Milk",
+      "description": "Fresh dairy milk",
+      "price": 1.99,
+      "image" : "milk.png"
+    },
+    {
+      "name": "Rice",
+      "description": "High-quality rice grains",
+      "price": 3.49,
+      "image" : "rice.png"
+    }
+]

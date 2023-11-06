@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import productsData from './products.json';
 
 const App = () => {
   const [view, setView] = useState('browse');
-  const [products, setProducts] = useState([
-    { id: 1, name: 'Product 1', description: 'Description 1', price: 10, image: 'product1.jpg' },
-    { id: 2, name: 'Product 2', description: 'Description 2', price: 15, image: 'product2.jpg' },
-    // Add more products
-  ]);
+  const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [search, setSearch] = useState('');
   const [formData, setFormData] = useState({
@@ -16,6 +13,10 @@ const App = () => {
     address: '',
     // Add more fields as needed
   });
+
+  useEffect(() => {
+    setProducts(productsData);
+  }, []);
 
   const handleSearchChange = (e) => {
     setSearch(e.target.value);
@@ -51,6 +52,8 @@ const App = () => {
     setView('browse');
   };
 
+  const baseURL = "./images/"
+
   return (
     <div>
       {view === 'browse' && (
@@ -60,8 +63,8 @@ const App = () => {
             {products
               .filter((product) => product.name.toLowerCase().includes(search.toLowerCase()))
               .map((product) => (
-                <div className="col" key={product.id}>
-                  <img src={product.image} alt={product.name} />
+                <div className="col" key={product.name}>
+                  <img src={require(baseURL + "apple.png")} alt={product.name} height = "100px" width = "120px"/>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <p>${product.price}</p>
