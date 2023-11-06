@@ -67,7 +67,7 @@ const App = () => {
               )
               .map((product) => (
                 <div className="col" key={product.id}>
-                  <img src={product.image} alt={product.name} />
+                  <img src={require(`./images/${product.image}`)} alt={product.name} height = "100px" width = "120px;"/>
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <p>${product.price}</p>
