@@ -6,6 +6,7 @@ import Albums from './pages/Albums'
 import Songs from './pages/Songs'
 import Compare from './pages/Compare'
 
+
 function App() {
   let component
   switch (window.location.pathname) {
