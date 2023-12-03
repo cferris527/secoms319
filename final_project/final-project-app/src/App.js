@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './Navbar'
+
+import Home from './pages/Home'
+import Artists from './pages/Artists'
+import Albums from './pages/Albums'
+import Songs from './pages/Songs'
+import Compare from './pages/Compare'
 
 function App() {
+  let component
+  switch (window.location.pathname) {
+    case "/":
+      component = <Home />
+      break
+    case "/home":
+      component = <Home />
+      break
+    case "/artists":
+      component = <Artists />
+      break
+    case "/albums":
+      component = <Albums />
+      break
+    case "/songs":
+      component = <Songs />
+      break
+    case "/compare":
+      component = <Compare />
+      break
+    default:
+      component = <Home />
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Navbar />
+      <div className="container">{component}</div>
+    </>
+  )
 }
 
 export default App;
