@@ -1,0 +1,74 @@
+[
+		{
+			"Name": "Slime You Out",
+			"Image" : "./images/songs/for_all_the_dogs.png",
+			"Duration": "5:10",
+			"Plays": "88,353,505",
+			"Album": "For All The Dogs",
+			"Artist" : "Drake"
+		},
+		{
+			"Name": "Blinding Lights",
+			"Image" : "./images/songs/after_hours.jpg",
+			"Duration": "3:20",
+			"Plays": "3,851,061,172",
+			"Album": "After Hours",
+			"Artist" : "The Weeknd"
+		},
+		{
+			"Name": "One Last Time",
+			"Image" : "./images/album/every.jpg",
+			"Duration": "3:17",
+			"Plays": "1,284,775,878",
+			"Album": "My Everything",
+			"Artist" : "Ariana Grande"
+		},
+		{
+			"Name": "Without Me",
+			"Image" : "./images/album/show.jpg",
+			"Duration": "4:50",
+			"Plays": "1,796,666,620",
+			"Album": "The Eminem Show",
+			"Artist" : "Eminem"
+		},
+		{
+			"Name": "Fireflies",
+			"Image" : "./images/songs/ocean_eyes.jpg",
+			"Duration": "3:48",
+			"Plays": "810,221,980",
+			"Album": "Ocean Eyes",
+			"Artist" : "Owl City"
+		},
+		{
+			"Name": "Super Bass",
+			"Image" : "./images/album/friday.jpg",
+			"Duration": "3:20",
+			"Plays": "729,453,130",
+			"Album": "Pink Friday (Complete Edition)",
+			"Artist" : "Nicki Minaj"
+		},
+		{
+			"Name": "Syrup",
+			"Image" : "./images/songs/syrup.jpg",
+			"Duration": "2:05",
+			"Plays": "3,295,871",
+			"Album": "Syrup",
+			"Artist" : "Slump AK feat. Lil Rocket Launcher"
+		},
+		{
+			"Name": "Instant Crush",
+			"Image" : "./images/songs/ram.png",
+			"Duration": "5:37",
+			"Plays": "524,237,585",
+			"Album": "Random Access Memories",
+			"Artist" : "Daft Punk feat. Julian Casablancas"
+		},
+		{
+			"Name": "Bound 2",
+			"Image" : "./images/songs/yeezus.jfif",
+			"Duration": "3:49",
+			"Plays": "769,558,962",
+			"Album": "Yeezus",
+			"Artist" : "Kanye West"
+		}
+]
