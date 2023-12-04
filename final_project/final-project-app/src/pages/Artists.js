@@ -26,6 +26,8 @@ const Home = () => {
             <h3>{artist.Name}</h3>
             <p>Born: {artist.Born}</p>
             <p>Hometown: {artist.Hometown}</p>
+            <p>Fun fact: {artist.FunFact}</p>
+            <p>Album: {artist.Album}</p>
         </div>
       ))}
     </div>

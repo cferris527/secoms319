@@ -26,6 +26,14 @@ app.get('/songInfo', (req, res) => {
 
 });
 
+app.get('/albumInfo', (req, res) => {
+  // Read album.json and send it as a response
+  const albumData = require('./data/album.json');
+  res.json(albumData);
+  res.status(200);
+
+});
+
 // Other server setup code...
 
 const PORT = 8080; // Or any other port you want to use
