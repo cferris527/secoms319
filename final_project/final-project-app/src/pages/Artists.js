@@ -18,7 +18,11 @@ const Home = () => {
     fetchData();
   }, []);
 
+
   return (
+    <div>
+    <h1>Artists</h1>
+
     <div className="grid-container">
       {artists.map((artist, index)=> (
         <div className="grid-item">
@@ -30,6 +34,7 @@ const Home = () => {
             <p>Album: {artist.Album}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 

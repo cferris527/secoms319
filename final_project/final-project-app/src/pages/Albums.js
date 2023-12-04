@@ -19,6 +19,8 @@ const Home = () => {
   }, []);
 
   return (
+    <div>
+    <h1>Albums</h1>
     <div className="grid-container">
       {albums.map((album, index)=> (
         <div className="grid-item">
@@ -29,6 +31,7 @@ const Home = () => {
             <p>Songs: {album.Songs[0]}, {album.Songs[1]}, {album.Songs[2]}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 

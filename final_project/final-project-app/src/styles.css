@@ -60,6 +60,14 @@ body {
 .titleText{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
     color: rgb(132, 0, 255);
+    font-size: 35px;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    color: rgb(132, 0, 255);
+    font-size:50px;
+    padding-left: 1rem;
 }
 
 h3 {
