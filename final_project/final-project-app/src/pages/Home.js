@@ -23,9 +23,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div className='flexContainer'>
       <div style={{ flex: 1 }}>
-        <h2>Artists</h2>
+        <h2 className='titleText'>Artists</h2>
         <ul>
           {artists.map((artist, index) => (
             <li key={index}>
@@ -41,7 +41,7 @@ const Home = () => {
         </ul>
       </div>
       <div style={{ flex: 1 }}>
-        <h2>Songs</h2>
+        <h2 className='titleText'>Songs</h2>
         <ul>
           {songs.map((song, index) => (
             <li key={index}>
