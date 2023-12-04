@@ -29,7 +29,7 @@ const Home = () => {
         <ul>
           {artists.map((artist, index) => (
             <li key={index}>
-              <img src={artist.Image} alt={artist.Name} />
+              <img src={artist.Image} width = "150" height = "150" alt={artist.Name}/>
               <div>
                 <h3>{artist.Name}</h3>
                 <p>Born: {artist.Born}</p>
@@ -45,7 +45,7 @@ const Home = () => {
         <ul>
           {songs.map((song, index) => (
             <li key={index}>
-              <img src={song.Image} alt={song.Name} />
+              <img src={song.Image} width = "150" height = "150" alt={song.Name} />
               <div>
                 <h3>{song.Name}</h3>
                 <p>Duration: {song.Duration}</p>
