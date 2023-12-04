@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const cors = require("cors");
 var bodyParser = require("body-parser");
-
+app.use(express.static('public'));
 app.use(cors());
 app.use(bodyParser.json());
 

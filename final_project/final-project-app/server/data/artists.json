@@ -2,7 +2,7 @@
 		{
 			"Name": "Billie Eilish",
 			"Born": "December 18, 2001",
-			"Image": "./images/artists/billie.jpeg",
+			"Image": "/images/artists/billie.jpeg",
 			"Hometown": "Los Angeles, CA",
 			"FunFact": "Recorded music in their family's home studio with her brother",
 			"Album": "When We Fall Asleep, Where Do We Go?",
@@ -13,7 +13,7 @@
 		{
 			"Name": "Drake",
 			"Born": "October 24, 1986",
-			"Image": "./images/artists/drake.jpeg",
+			"Image": "/images/artists/drake.jpeg",
 			"Hometown": "Toronto, Canada",
 			"FunFact": "He was in the childhood show Degrassi.",
 			"Album": "Take Care",
@@ -24,7 +24,7 @@
 		{
 			"Name": "Nicki Minaj",
 			"Born": "December 8, 1982",
-			"Image": "./images/artists/nicki-manaj.jpeg",
+			"Image": "/images/artists/nicki-manaj.jpeg",
 			"Hometown": "Queens, NY",
 			"FunFact": "Initially pursued acting before singing.",
 			"Album": "Pink Friday",
@@ -35,7 +35,7 @@
 		{
 			"Name": "Ariana Grande",
 			"Born": "June 26, 1993",
-			"Image": "./images/artists/ari.jpeg",
+			"Image": "/images/artists/ari.jpeg",
 			"Hometown": "Boca Raton, FL",
 			"FunFact": "Began her career as an actress on Victorious and Sam & Cat",
 			"Album": "Thank U, Next",
@@ -46,7 +46,7 @@
 		{
 			"Name": "Eminem",
 			"Born": "October 17, 1972",
-			"Image": "./images/artists/em.jpeg",
+			"Image": "/images/artists/em.jpeg",
 			"Hometown": "St. Joseph, MO",
 			"FunFact": "He is left-handed.",
 			"Album": "The Marshall Mathers LP",
@@ -57,7 +57,7 @@
 		{
 			"Name": "The Weekend",
 			"Born": "February 16, 1990",
-			"Image": "./images/artists/the-weekend.jpeg",
+			"Image": "/images/artists/the-weekend.jpeg",
 			"Hometown": "Toronto, Canada",
 			"FunFact": "He would upload his music anonymously to the internet in his early career.",
 			"Album": "Beauty Behind the Madness",
