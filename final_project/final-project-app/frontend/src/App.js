@@ -5,13 +5,13 @@ import Artists from './pages/Artists'
 import Albums from './pages/Albums'
 import Songs from './pages/Songs'
 import Compare from './pages/Compare'
-
+import About from './pages/About'
 
 function App() {
   let component
   switch (window.location.pathname) {
     case "/":
-      component = <Home />
+      component = <About />
       break
     case "/home":
       component = <Home />
