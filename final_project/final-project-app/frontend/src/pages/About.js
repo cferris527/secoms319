@@ -2,6 +2,7 @@ const Home = () => {
     return (
     <div>
     <h1>About the class</h1>
+    <h2>Date: December 3rd, 2023</h2>
     <p class="text1">
         This website was created for COM S 319: Construction of User Interfaces.
         This is the final project for the two-person teams in the class.
@@ -19,6 +20,12 @@ const Home = () => {
         <p class="text1">
             Joseph is a senior in computer science. He is from St Louis, MO
             Feel free to email him: jtj9@iastate.edu
+        </p>
+    </div>
+    <div>
+        <h3>Dr. Abraham N. Aldaco Gastelum</h3>
+        <p class="text1">
+            Dr. Aldaco is our professor who is overseeing this course. You can email him ataaldaco@iastate.edu
         </p>
     </div>
     </div> );

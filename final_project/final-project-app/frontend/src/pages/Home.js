@@ -24,25 +24,27 @@ const Home = () => {
 
   return (
     <div className='flexContainer'>
-      <div style={{ flex: 1 }}>
+      <div class = "homeItems">
         <h2 className='titleText'>Artists</h2>
-        <ul>
+        <ul class = "infoList">
           {artists.map((artist, index) => (
             <li key={index}>
-              <img src={artist.Image} width = "150" height = "150" alt={artist.Name}/>
               <div>
-                <h3>{artist.Name}</h3>
-                <p>Born: {artist.Born}</p>
-                <p>Hometown: {artist.Hometown}</p>
-                {/* Add more artist details here if needed */}
+                <img src={artist.Image} class = "homeImage" alt={artist.Name}/>
+                <div>
+                  <h3>{artist.Name}</h3>
+                  <p>Born: {artist.Born}</p>
+                  <p>Hometown: {artist.Hometown}</p>
+                  {/* Add more artist details here if needed */}
+                </div>
               </div>
             </li>
           ))}
         </ul>
       </div>
-      <div style={{ flex: 1 }}>
+      <div class = "homeItems">
         <h2 className='titleText'>Songs</h2>
-        <ul>
+        <ul class = "infoList">
           {songs.map((song, index) => (
             <li key={index}>
               <img src={song.Image} width = "150" height = "150" alt={song.Name} />
