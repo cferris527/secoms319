@@ -1,6 +1,6 @@
 const Home = () => {
     return (
-    <div>
+    <div className="infoList">
     <h1>About the class</h1>
     <h2>Date: December 3rd, 2023</h2>
     <p class="text1">
