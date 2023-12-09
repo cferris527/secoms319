@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-const serverURL = "http://localhost:8080";
+const serverURL = "http://localhost:3080";
 const Home = () => {
   const [artists, setArtists] = useState([]);
   const [albums, setAlbums] = useState([]);
@@ -8,15 +8,15 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const artistsResponse = await fetch(serverURL + '/artistInfo');
+        const artistsResponse = await fetch(serverURL + '/artists');
         const artistsData = await artistsResponse.json();
         setArtists(artistsData);
 
-        const songsResponse = await fetch(serverURL + '/songInfo');
+        const songsResponse = await fetch(serverURL + '/songs');
         const songsData = await songsResponse.json();
         setSongs(songsData);
 
-        const albumsResponse = await fetch(serverURL + '/albumInfo');
+        const albumsResponse = await fetch(serverURL + '/albums');
         const albumsData = await albumsResponse.json();
         setAlbums(albumsData);
       } catch (error) {

@@ -1,42 +1,194 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const cors = require('cors'); // Import cors package
 const app = express();
-const path = require('path');
-const cors = require("cors");
-var bodyParser = require("body-parser");
-app.use(express.static('public'));
-app.use(cors());
+const port = 3080;
 app.use(bodyParser.json());
+app.use(cors());
 
-// Serve static files (like JSON files)
-app.use(express.static(path.join(__dirname, 'public')));
+// MongoDB connection
+mongoose.connect('mongodb://127.0.0.1:27017/ArtistInsight', {});
 
-app.get('/artistInfo', (req, res) => {
-  // Read artists.json and send it as a response
-  const artistsData = require('./data/artists.json');
-  res.json(artistsData);
-  res.status(200);
+// Create Mongoose Schemas for each collection
+const albumSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId,
+  Name: String,
+  Singer: String,
+  Image: String,
+  Date: String,
+  Songs: [String],
+  // Add other fields as needed
+}, { collection : 'Albums' });
 
+const artistSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId,
+  Name: String,
+  Born: String,
+  Image: String,
+  Hometown: String,
+  FunFact: String,
+  Album: String,
+  Songs: [String],
+  // Add other fields as needed
+}, { collection : 'Artists' });
+
+const songSchema = new mongoose.Schema({
+  _id: mongoose.Types.ObjectId,
+  Name: String,
+  Image: String,
+  Duration: String,
+  Plays: String,
+  Album: String,
+  Songs: [String],
+  // Add other fields as needed
+}, { collection : 'Songs' });
+
+const Album = mongoose.model('Album', albumSchema);
+const Artist = mongoose.model('Artist', artistSchema);
+const Song = mongoose.model('Song', songSchema);
+// CRUD operations for Albums collection
+
+// Create an album
+app.post('/albums', async (req, res) => {
+  try {
+    const { title, artistId, songs } = req.body;
+    const album = await Album.create({ title, artistId, songs });
+    res.json(album);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/songInfo', (req, res) => {
-  // Read songs.json and send it as a response
-  const songsData = require('./data/songs.json');
-  res.json(songsData);
-  res.status(200);
-
+// Read all albums
+app.get('/albums', async (req, res) => {
+  try {
+    const albums = await Album.find();
+    res.json(albums);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-app.get('/albumInfo', (req, res) => {
-  // Read album.json and send it as a response
-  const albumData = require('./data/album.json');
-  res.json(albumData);
-  res.status(200);
-
+// Update an album by ID
+app.put('/albums/:id', async (req, res) => {
+  try {
+    const album = await Album.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(album);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 });
 
-// Other server setup code...
+// Delete an album by ID
+app.delete('/albums/:id', async (req, res) => {
+  try {
+    const album = await Album.findByIdAndDelete(req.params.id);
+    res.json(album);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
-const PORT = 8080; // Or any other port you want to use
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// CRUD operations for Artists collection
+
+// Create an artist
+app.post('/artists', async (req, res) => {
+  try {
+    const { name } = req.body;
+    const artist = await Artist.create({ name });
+    res.json(artist);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Read all artists
+app.get('/artists', async (req, res) => {
+  try {
+    const artists = await Artist.find();
+    res.json(artists);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Update an artist by ID
+app.put('/artists/:id', async (req, res) => {
+  try {
+    const artist = await Artist.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(artist);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Delete an artist by ID
+app.delete('/artists/:id', async (req, res) => {
+  try {
+    const artist = await Artist.findByIdAndDelete(req.params.id);
+    res.json(artist);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// CRUD operations for Songs collection
+
+// Create a song
+app.post('/songs', async (req, res) => {
+  try {
+    const { title, artistId, albumId } = req.body;
+    const song = await Song.create({ title, artistId, albumId });
+    res.json(song);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Read all songs
+app.get('/songs', async (req, res) => {
+  try {
+    const songs = await Song.find();
+    res.json(songs);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Update a song by ID
+app.put('/songs/:id', async (req, res) => {
+  try {
+    const song = await Song.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.json(song);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Delete a song by ID
+app.delete('/songs/:id', async (req, res) => {
+  try {
+    const song = await Song.findByIdAndDelete(req.params.id);
+    res.json(song);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Start the server
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });

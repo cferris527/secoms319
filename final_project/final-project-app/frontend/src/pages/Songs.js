@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-const serverURL = "http://localhost:8080";
+const serverURL = "http://localhost:3080";
 const Home = () => {
   const [songs, setSongs] = useState([]);
   const [search, setSearch] = useState('');
@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const songsResponse = await fetch(serverURL + '/songInfo');
+        const songsResponse = await fetch(serverURL + '/songs');
         const songData = await songsResponse.json();
         setSongs(songData);
 
