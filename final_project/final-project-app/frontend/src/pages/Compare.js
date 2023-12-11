@@ -73,7 +73,7 @@ const Home = () => {
 
   const setArtist1TopSong = (artists) => {
     for (var i = 0; i < songs.length; ++i) {
-        if (songs[i].Artist == artists[0].Name) 
+        if (songs[i].Artist === artists[0].Name) 
         {
             return "Most played song: " + songs[i].Name + " : " + songs[i].Plays + " plays";
         }
@@ -83,7 +83,7 @@ const Home = () => {
 
   const setArtist2TopSong = (artists) => {
     for (var i = 0; i < songs.length; ++i) {
-        if (songs[i].Artist == artists[1].Name) 
+        if (songs[i].Artist === artists[1].Name) 
         {
             return "Most played song: " + songs[i].Name + " : " + songs[i].Plays + " plays";
         }

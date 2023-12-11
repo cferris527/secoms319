@@ -150,3 +150,35 @@ p {
     font-size: 16px;
     margin-bottom: 20px;
 }
+
+/* Form */
+
+.inputField {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #a98467;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.submitButton {
+    width: 200px;
+    background: #4caf50;
+    color: white;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.submitButton:hover {
+    background: #45a049;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
