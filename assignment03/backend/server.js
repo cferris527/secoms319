@@ -69,17 +69,13 @@ app.post("/api/create", async (req, res) => {
 app.put("/api/update/:id", async (req, res) => {
   try {
     const id = req.params.id;
-    const { title, price, description, category, image, rating } = req.body;
+    const { title, price} = req.body;
     await Fakestore.updateOne(
       { id: parseInt(id) },
       {
         $set: {
           title,
-          price,
-          description,
-          category,
-          image,
-          rating,
+          price
         },
       }
     );
