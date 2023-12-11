@@ -54,7 +54,7 @@ const Home = () => {
   const setArtist1String = (artists) => {
     if (artists.length >= 2) {
       if (compareArtists(artists[0].Name, artists[1].Name) === 1) {
-        return artists[0].Name + "; Winner";
+        return artists[0].Name + "  -  Winner!!";
       }
       return artists[0].Name;
     }
@@ -64,7 +64,7 @@ const Home = () => {
   const setArtist2String = (artists) => {
     if (artists.length >= 2) {
       if (compareArtists(artists[0].Name, artists[1].Name) === 2) {
-        return artists[1].Name + "; Winner";
+        return artists[1].Name + "  -  Winner!!";
       }
       return artists[1].Name;
     }

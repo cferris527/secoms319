@@ -12,7 +12,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/ArtistInsight', {});
 
 // Create Mongoose Schemas for each collection
 const albumSchema = new mongoose.Schema({
-  _id: mongoose.Types.ObjectId,
   Name: String,
   Singer: String,
   Image: String,
@@ -22,7 +21,6 @@ const albumSchema = new mongoose.Schema({
 }, { collection : 'Albums' });
 
 const artistSchema = new mongoose.Schema({
-  _id: mongoose.Types.ObjectId,
   Name: String,
   Born: String,
   Image: String,
@@ -34,7 +32,6 @@ const artistSchema = new mongoose.Schema({
 }, { collection : 'Artists' });
 
 const songSchema = new mongoose.Schema({
-  _id: mongoose.Types.ObjectId,
   Name: String,
   Image: String,
   Duration: String,
@@ -99,9 +96,26 @@ app.delete('/albums/:id', async (req, res) => {
 // Create an artist
 app.post('/artists', async (req, res) => {
   try {
-    const { name } = req.body;
-    const artist = await Artist.create({ name });
-    res.json(artist);
+    const {
+      Name,
+      Born,
+      Image,
+      Hometown,
+      FunFact,
+      Album,
+      Songs // If needed
+    } = req.body;
+    const newArtist = await Artist.create({
+      Name,
+      Born,
+      Image,
+      Hometown,
+      FunFact,
+      Album,
+      Songs // If needed
+    });
+
+    res.json(newArtist);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -118,23 +132,39 @@ app.get('/artists', async (req, res) => {
 });
 
 // Update an artist by ID
-app.put('/artists/:id', async (req, res) => {
+app.put('/artists/:name/funfact', async (req, res) => {
   try {
-    const artist = await Artist.findByIdAndUpdate(
-      req.params.id,
-      req.body,
+    const { name } = req.params;
+    const { newFunFact } = req.body; // Assuming the updated fun fact is sent in the request body
+
+    const updatedArtist = await Artist.findOneAndUpdate(
+      { Name: name },
+      { $set: { FunFact: newFunFact } },
       { new: true }
     );
-    res.json(artist);
+
+    if (!updatedArtist) {
+      return res.status(404).json({ error: 'Artist not found' });
+    }
+
+    res.json(updatedArtist);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
 });
 
+
 // Delete an artist by ID
-app.delete('/artists/:id', async (req, res) => {
+app.delete('/artists/:name', async (req, res) => {
+  console.log(req);
   try {
-    const artist = await Artist.findByIdAndDelete(req.params.id);
+    const { name } = req.params;
+    const artist = await Artist.findOneAndDelete({ Name: name });
+    
+    if (!artist) {
+      return res.status(404).json({ error: 'Artist not found' });
+    }
+
     res.json(artist);
   } catch (err) {
     res.status(500).json({ error: err.message });

@@ -3,17 +3,47 @@ const serverURL = "http://localhost:3080";
 const Home = () => {
   const [artists, setArtists] = useState([]);
   const [search, setSearch] = useState('');
-  const [id_delete, set_id_delete] = useState('');
+  const [idDelete, setIdDelete] = useState('');
 
   // New artist info to be added
   const [addNewArtist, setAddNewArtist] = useState({
     Name: "",
     Born: "",
-    Image: "http://127.0.0.1:4000/images/",
+    Image: "",
     Hometown: "",
     FunFact: "",
-    Album: ""
+    Album: "",
+    Songs: []
   });
+
+  const handleIdChange = (e) => {
+    setIdDelete(e.target.value);
+  };
+  const [updateArtist, setUpdateArtist] = useState({
+    Name: '',
+    FunFact: ''
+  });
+  
+  // Function to handle changes in the input fields
+  const handleUpdateChange = (e) => {
+    const { name, value } = e.target;
+    setUpdateArtist({
+      ...updateArtist,
+      [name]: value
+    });
+  };
+  
+  // Function to trigger the update
+  const handleUpdateSubmit = (e) => {
+    e.preventDefault();
+    const { Name, FunFact } = updateArtist;
+    updateArtistFunFact(Name, FunFact);
+    // Optionally, you might want to clear the form fields after submission
+    setUpdateArtist({
+      Name: '',
+      FunFact: ''
+    });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -56,7 +86,7 @@ const Home = () => {
   function handleOnSubmit(e) {
     e.preventDefault();
     console.log(e.target.value);
-    fetch("http://127.0.0.1:4000/artists", {
+    fetch(serverURL + "/artists", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(addNewArtist),
@@ -73,29 +103,54 @@ const Home = () => {
       });
   }
 
+  function updateArtistFunFact(artistName, newFunFact) {
+    fetch(`${serverURL}/artists/${artistName}/funfact`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ newFunFact }), // Send the new fun fact in the request body
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to update artist's fun fact");
+      }
+      return response.json(); // Parse JSON response
+    })
+    .then((data) => {
+      console.log("Update artist's fun fact completed for:", artistName);
+      console.log(data);
+      // Assuming the server responds with the updated artist details
+      // You can handle the response data accordingly
+    })
+    .catch((error) => {
+      console.error("Error updating artist's fun fact:", error);
+      // Handle error here if needed
+    });
+  }
+
   // Delete Artist by ID
-  function deleteOneProduct(deleteid) {
-    console.log("Artist to delete :", deleteid);
-    fetch(`http://127.0.0.1:4000/api/artists/:${deleteid}`, { // Include deleteid in the URL
+  function deleteOneProduct(e) {
+    e.preventDefault(); // Prevent form submission and page refresh
+    console.log("Artist to delete:", idDelete);
+    fetch(`${serverURL}/artists/${idDelete}`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to delete product");
-        }
-        return response.json(); // Parse JSON response
-      })
-      .then((data) => {
-        console.log("Delete a product completed : ", deleteid);
-        console.log(data);
-        // Assuming the server responds with { "message": "Post deleted successfully" }
-        alert(data.message); // Show the response message
-      })
-      .catch((error) => {
-        console.error("Error deleting product:", error);
-        // Handle error here if needed
-      });
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to delete artist");
+      }
+      return response.json(); // Parse JSON response
+    })
+    .then((data) => {
+      console.log("Delete an artist completed:", idDelete);
+      console.log(data);
+      // Assuming the server responds with { "message": "Artist deleted successfully" }
+      alert(data.message); // Show the response message
+    })
+    .catch((error) => {
+      console.error("Error deleting artist:", error);
+      // Handle error here if needed
+    });
   }
 
   return (
@@ -129,29 +184,38 @@ const Home = () => {
           </button>
         </form>
 
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="ID?" name="Id"
-            onChange={ (e) =>set_id_delete(e)} />
-          <button className="submitButton" type="submit" onClick={deleteOneProduct}>
-           Delete Artist
+        <form className="formContainer" onSubmit={deleteOneProduct}>
+          <input
+            className="inputField"
+            type="text"
+            placeholder="Name?"
+            value={idDelete}
+            onChange={handleIdChange}
+          />
+          <button className="submitButton" type="submit">
+            Delete Artist
           </button>
         </form>
 
-        <form className="formContainer" action="">
-        <input className="inputField" type="text" placeholder="Name?" name="Name" value={addNewArtist.Name}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Born?" name="Born" value={addNewArtist.Born}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Image?" name="Image" value={addNewArtist.Image}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Hometown?" name="Hometown" value={addNewArtist.Hometown}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="FunFact?" name="FunFact" value={addNewArtist.FunFact}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Album?" name="Album" value={addNewArtist.Album}
-            onChange={handleChange} />
-          <button className="submitButton" type="submit" onClick={handleOnSubmit}>
-           Update Artist Info
+        <form className="formContainer" onSubmit={handleUpdateSubmit}>
+          <input
+            className="inputField"
+            type="text"
+            placeholder="Name?"
+            name="Name"
+            value={updateArtist.Name}
+            onChange={handleUpdateChange}
+          />
+          <input
+            className="inputField"
+            type="text"
+            placeholder="FunFact?"
+            name="FunFact"
+            value={updateArtist.FunFact}
+            onChange={handleUpdateChange}
+          />
+          <button className="submitButton" type="submit">
+            Update Artist Info
           </button>
         </form>
 
