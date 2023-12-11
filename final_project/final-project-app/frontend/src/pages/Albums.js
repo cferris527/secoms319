@@ -97,49 +97,9 @@ const Home = () => {
 
       <input className='searchBar'
         type="text"
-        placeholder="Search Artists"
+        placeholder="Search Albums"
         onChange={(e) => setSearch(e.target.value)}
       />
-
-      <h3>Add Album, Delete Album, Update Existing Album</h3>
-      <div className="grid-container">
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="Name?" name="Name" value={addNewAlbum.Name}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Singer?" name="Singer" value={addNewAlbum.Singer}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Image?" name="Image" value={addNewAlbum.Image}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Date?" name="Date" value={addNewAlbum.Date}
-            onChange={handleChange} />
-          <button className="submitButton" type="submit" onClick={handleOnSubmit}>
-            Submit New Album
-          </button>
-        </form>
-
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="ID?" name="Id"
-            onChange={(e) => set_id_delete(e)} />
-          <button className="submitButton" type="submit" onClick={deleteOneProduct}>
-            Delete Album
-          </button>
-        </form>
-
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="Name?" name="Name" value={addNewAlbum.Name}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Singer?" name="Singer" value={addNewAlbum.Singer}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Image?" name="Image" value={addNewAlbum.Image}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Date?" name="Date" value={addNewAlbum.Date}
-            onChange={handleChange} />
-          <button className="submitButton" type="submit" onClick={handleOnSubmit}>
-            Update Album Info
-          </button>
-        </form>
-
-      </div>
 
       <div className="grid-container">
         {albums.filter((album) =>

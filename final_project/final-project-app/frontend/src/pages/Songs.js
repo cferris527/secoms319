@@ -109,54 +109,6 @@ const Home = () => {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <h3>Add Song, Delete Song, Update Existing Song</h3>
-      <div className="grid-container">
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="Name?" name="Name" value={addNewSong.Name}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Image?" name="Image" value={addNewSong.Image}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Duration?" name="Duration" value={addNewSong.Duration}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Plays?" name="Plays" value={addNewSong.Plays}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Album?" name="Album" value={addNewSong.Album}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Artist?" name="Artist" value={addNewSong.Artist}
-            onChange={handleChange} />
-          <button className="submitButton" type="submit" onClick={handleOnSubmit}>
-            Submit New Song
-          </button>
-        </form>
-
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="ID?" name="Id"
-            onChange={(e) => set_id_delete(e)} />
-          <button className="submitButton" type="submit" onClick={deleteOneProduct}>
-            Delete Song
-          </button>
-        </form>
-
-        <form className="formContainer" action="">
-          <input className="inputField" type="text" placeholder="Name?" name="Name" value={addNewSong.Name}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Image?" name="Image" value={addNewSong.Image}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Duration?" name="Duration" value={addNewSong.Duration}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Plays?" name="Plays" value={addNewSong.Plays}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Album?" name="Album" value={addNewSong.Album}
-            onChange={handleChange} />
-          <input className="inputField" type="text" placeholder="Artist?" name="Artist" value={addNewSong.Artist}
-            onChange={handleChange} />
-          <button className="submitButton" type="submit" onClick={handleOnSubmit}>
-            Update Song Info
-          </button>
-        </form>
-
-      </div>
-
       <div className='blackout'>
         <div className="grid-container">
           {songs.filter((song) =>

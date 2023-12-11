@@ -98,7 +98,7 @@ const Home = () => {
         if (data) {
           //const keys = Object.keys(data);
           const value = Object.values(data);
-          alert(value);
+          alert("Complete!");
         }
       });
   }
@@ -145,7 +145,7 @@ const Home = () => {
       console.log("Delete an artist completed:", idDelete);
       console.log(data);
       // Assuming the server responds with { "message": "Artist deleted successfully" }
-      alert(data.message); // Show the response message
+      alert("Complete!"); // Show the response message
     })
     .catch((error) => {
       console.error("Error deleting artist:", error);
